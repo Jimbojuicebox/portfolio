@@ -31,7 +31,7 @@ export const FormInput = styled.input`
     padding: 15px;
 
     &::placeholder {
-        color: ${({ theme }) => theme.colors.para_text_color};
+        color: gray;
     }
 `
 

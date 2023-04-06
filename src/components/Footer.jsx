@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 
 import {
     PaddingContainer,
@@ -21,28 +22,22 @@ import { fadeInBottomVariant } from '../utils/Variants'
 
 
 const Footer = ({ openMenu }) => {
-    const [name, setName] = useState('')
+    /* const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const [message, setMessage] = useState('')
+    const [message, setMessage] = useState('') */
     const [submitted, setSubmitted] = useState(false)
 
     const onSubmit = (e) => {
         e.preventDefault()
 
-        let xhr = new XMLHttpRequest()
-        xhr.open('POST', '../contact-form.php')
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                setSubmitted(true)
-            }
-        }
-        xhr.send('name=' + name + '&email=' + email + '&message=' + message)
-        
-        setName('')
-        setEmail('')
-        setMessage('')
-        setSubmitted(true)
+        emailjs.sendForm('service_75gqo76', 'template_3uqh0hp', e.target, 'vCXzSh651d1M0HDCQ')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            e.target.reset()
+            setSubmitted(true)
     }
 
     return (
@@ -88,8 +83,8 @@ const Footer = ({ openMenu }) => {
                             <FormInput
                                 type='text'
                                 placeholder='Enter your name'
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
+                                name='name'
+                                /* onChange={(e) => setName(e.target.value)} */
                             />
                         </PaddingContainer>
 
@@ -98,8 +93,8 @@ const Footer = ({ openMenu }) => {
                             <FormInput
                                 type='email'
                                 placeholder='Enter your email address'
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                name='email'
+                                /* onChange={(e) => setEmail(e.target.value)} */
                             />
                         </PaddingContainer>
 
@@ -108,8 +103,8 @@ const Footer = ({ openMenu }) => {
                             <FormInput
                                 as='textarea'
                                 placeholder='Enter your message'
-                                value={message}
-                                onChange={(e) => setMessage(e.target.value)}
+                                name='message'
+                                /* onChange={(e) => setMessage(e.target.value)} */
                             />
                         </PaddingContainer>
 
