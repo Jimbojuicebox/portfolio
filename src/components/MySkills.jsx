@@ -80,6 +80,12 @@ const MySkills = ({ openMenu }) => {
                     I try to put an emphasis on scalability and easily maintainable applications. This allows the 
                     creation of efficient and sustainable code ready to adapt to the changing needs of a business.
                 </ParaText>
+
+                <ParaText bottom='1.5rem'>
+                    NextJS recently became the official React framework. It's improved SEO, server side rendering 
+                    and many other advanced features, when paired with MongoDb for data storage, allow for an 
+                    incredibly powerful but also streamlined and easy to use tech stack.
+                </ParaText>
             </motion.div>
         </FlexContainer>
     </PaddingContainer>

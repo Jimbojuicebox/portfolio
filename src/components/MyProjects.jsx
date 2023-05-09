@@ -50,7 +50,7 @@ const MyProjects = ({ openMenu }) => {
             whileInView='visible' 
             size='h4'
         >
-            <BlueText>This site</BlueText> was built using ReactJS, Vite, Styled Components and Framer-Motion
+            <BlueText>This Portfolio site</BlueText> was built using ReactJS, Vite, Styled Components and Framer-Motion
         </Heading>
 
         {ProjectDetails.map((project) => (

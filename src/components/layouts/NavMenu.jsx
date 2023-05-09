@@ -42,7 +42,7 @@ const NavMenu = ({ setOpenMenu }) => {
         </PaddingContainer>
 
         {/* nav menu items */}
-        <PaddingContainer top='8%'>
+        <PaddingContainer top='5%'>
             <FlexContainer
                 direction='column'
                 align='center'
