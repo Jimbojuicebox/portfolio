@@ -11,6 +11,7 @@ import Project6 from '../assets/project6.jpg'
 import Project7 from '../assets/project7.jpg'
 import Project8 from '../assets/project8.jpg'
 import Project9 from '../assets/project9.jpg'
+import Project10 from '../assets/project10.jpg'
 
 export const Skills = [
     {
@@ -37,6 +38,26 @@ export const Skills = [
 
 export const ProjectDetails = [
     {
+        id: 1,
+        project_name: 'Redlight Directory',
+        project_desc: 'A directory of all the projects and useful information on the Redlight Blockchain. Frontend using Vite/React/Styled-components/web3. Backend Json migrating to MongoDb.',
+        tech_stack: ['React', 'Styled Components', 'web3', 'MongoDb'],
+        project_img: Project8,
+        project_url: 'https://redlightdirectory.net/',
+        github: 'https://github.com/Jimbojuicebox/redlight',
+        reverse: true
+    },
+    {
+        id: 0,
+        project_name: 'CarHub',
+        project_desc: 'A NextJS application using APIs to get car data and images and display ready to book a rental. Optimised server side and client side rendering using new the App router in NextJS 13.',
+        tech_stack: ['NextJS','TypeScript', 'Tailwind'],
+        project_img: Project10,
+        project_url: 'https://carhub-seven.vercel.app/',
+        github: 'https://github.com/Jimbojuicebox/carhub',
+        reverse: false
+    },
+    {
         id: 7,
         project_name: 'Prompt Mashin',
         project_desc: 'A full stack ReactJS app built using NextJS, MongoDb and Google Auth. Browse and store useful AI prompts. Search by tag, phrase, username.',
@@ -44,16 +65,6 @@ export const ProjectDetails = [
         project_img: Project9,
         project_url: 'https://prompt-mashin-m9xznt1w9-jimbojuicebox.vercel.app/',
         github: 'https://github.com/Jimbojuicebox/prompt-mashin',
-        reverse: false
-    },
-    {
-        id: 1,
-        project_name: 'Redlight Directory',
-        project_desc: 'A directory of all the projects and useful information on the Redlight Blockchain. Frontend using Vite/React/Styled-components/web3. Backend Json migrating to MongoDb.',
-        tech_stack: ['Vite','React', 'Styled-components', 'web3', 'MongoDb'],
-        project_img: Project8,
-        project_url: 'https://redlightdirectory.net/',
-        github: 'https://github.com/Jimbojuicebox?tab=repositories',
         reverse: true
     },
     {
